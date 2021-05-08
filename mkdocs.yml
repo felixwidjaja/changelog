@@ -7,14 +7,22 @@ theme:
   name: material
   custom_dir: docs/theme
   palette:
-    primary: black
-    scheme: slate
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
     logo: material/server
   features:
     - navigation.instant
     - header.autohide
+    - navigation.expand
+    - navigation.top
   favicon: assets/images/favicon.png
 
 nav:
@@ -78,12 +86,6 @@ markdown_extensions:
       separator: "\uff0b"
   - pymdownx.details
   - pymdownx.tabbed
-
-extra_css:
-  - assets/pymdownx-extras/extra-f685a81b8c.css
-  - assets/stylesheets/extra.css
-extra_javascript:
-  - assets/pymdownx-extras/extra-uml-30be4556.js
 
 plugins:
   - search
