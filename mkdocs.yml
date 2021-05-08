@@ -1,0 +1,86 @@
+site_name: Equinix Metal OS Changelog
+site_description: Equinix Metal OS Changelog
+repo_url: https://github.com/packethost/metal-images-changelog
+docs_dir: docs/
+
+theme:
+  name: material
+  palette:
+    primary: black
+    scheme: slate
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/server
+  features:
+    - navigation.instant
+    - header.autohide
+  favicon: assets/favicon.png
+
+nav:
+  - Home: index.md
+  - Centos:
+      - 7: centos/7.md
+      - 8: centos/8.md
+  - Debian:
+      - 9: debian/9.md
+      - 10: debian/10.md
+      - 11: debian/11.md
+  - RHEL:
+      - 8: rhel/8.md
+  - Ubuntu:
+      - 16.04: ubuntu/16_04.md
+
+markdown_extensions:
+  - meta
+  - toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: ""
+      toc_depth: '2-3'
+  - admonition
+  - smarty:
+      smart_quotes: false
+  - pymdownx.betterem
+  - attr_list
+  - def_list
+  - tables
+  - abbr
+  - footnotes
+  - md_in_html
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      social_url_shortener: true
+      provider: 'github'
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.smartsymbols
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
+  - pymdownx.progressbar
+  - pymdownx.arithmatex
+  - pymdownx.mark
+  - pymdownx.striphtml
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.details
+  - pymdownx.tabbed
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+copyright: Copyright &copy; 2021 <a href="https://metal.equinix.com">Equinix Metal</a>

@@ -1,0 +1,21 @@
+name: Publish via GitHub Pages
+on:
+  push:
+    branches:
+      - publish
+
+jobs:
+  build:
+    name: publish pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy MkDocs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.19
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CUSTOM_DOMAIN: changelog.pages.metalkube.net
+          EXTRA_PACKAGES: build-base
+          CONFIG_FILE: mkdocs.yml
+          GITHUB_DOMAIN: github.com
