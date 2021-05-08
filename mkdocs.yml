@@ -5,16 +5,9 @@ docs_dir: docs/
 
 theme:
   name: material
-  custom_dir: docs/theme
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    primary: red
+    scheme: default
   icon:
     repo: fontawesome/brands/github
     logo: material/server
@@ -23,6 +16,7 @@ theme:
     - header.autohide
     - navigation.expand
     - navigation.top
+    - navigation.tabs
   favicon: assets/images/favicon.png
 
 nav:
