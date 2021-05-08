@@ -16,7 +16,6 @@ theme:
     - header.autohide
     - navigation.expand
     - navigation.top
-    - navigation.tabs
   favicon: assets/images/favicon.png
 
 nav:
