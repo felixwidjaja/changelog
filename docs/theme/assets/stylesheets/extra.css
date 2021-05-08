@@ -1,0 +1,205 @@
+/* MKA these are all "metal specific" overrides from the upstream theme
+   If you need to make customizations, this is where you would do it, NOT in the pymdownx-extras dir */
+
+/* These md's set everything globally; use with caution */
+
+.md-typeset a {
+  font-size: 14px;
+}
+
+.md-typeset code {
+  color: #c8d1dc;
+  font-size: 14px;
+  background-color: #121314;
+}
+
+.md-typeset :not(pre)>code {
+  margin: 0;
+  padding: 0 .4em;
+  color: var(--md-code-fg-color);
+  background-color: #4f576773;
+  border-radius: .4rem;
+  box-shadow: none;
+}
+
+.md-grid {
+  max-width: 1500px;
+}
+
+.md-typeset a:hover code {
+  text-decoration: underline;
+}
+
+.md-typeset table:not([class]) {
+  display: inline-block;
+  max-width: 100%;
+  overflow: auto;
+  font-size: 14px;
+  background-color: var(--md-default-bg-color);
+  border-radius: .1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);
+  touch-action: auto;
+}
+
+.md-typeset table:not([class]) td {
+  background-color: #4b556736;
+  padding: .9375em 1.25em;
+  vertical-align: top;
+  border-top: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Home page stuffs */
+
+.home-header {
+  font: 1.2em;
+  margin-bottom: 5px;
+  padding-left: 12px
+}
+
+.home-header, .home-header a {
+  color: #e4e6ebd4;
+}
+
+.home-header i {
+  vertical-align: center;
+  padding-right: 4px;
+}
+
+.home-header span {
+  vertical-align: center;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 850px;
+  padding-left: 20px;
+}
+
+.home-box {
+  flex-basis: 260px;
+  margin: 8px;
+  min-height: 200px;
+
+  box-sizing: border-box;
+  padding: 14px;
+  background-color: #4fe01500;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding-bottom: 17px;
+  -webkit-box-shadow: 0 .2rem .5rem rgba(0,0,0,.3),0 0 .05rem rgba(0,0,0,.2);
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,.3),0 0 .05rem rgba(0,0,0,.2);
+}
+
+/* Cluster inventory stuffs */
+
+.inventory-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inventory-box {
+  margin-right:30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.copy-box {
+  margin-right:30px;
+  flex-wrap: wrap;
+}
+
+#rack {
+  width:100%;
+  border: 1px solid grey;
+  background-color: #4B5567;
+}
+
+#position {
+  min-width: 5px;
+  margin: 0;
+  padding: 2px;
+  font-size: 12px;
+  vertical-align: middle;
+  height: 35px;
+}
+
+#empty-position {
+  min-width: 5px;
+  margin: 0;
+  padding: 2px;
+  font-size: 12px;
+  vertical-align: middle;
+  height: 20px;
+}
+
+#device {
+  font-size: 14px;
+  padding: 2px;
+  height: 35px;
+  min-width: 175px;
+  vertical-align: middle;
+}
+
+#empty-device {
+  background-color: #20242E;
+  font-size: 14px;
+  padding: 2px;
+  height: 20px;
+  min-width: 175px;
+  vertical-align: middle;
+}
+
+/* Tabbed sets are the tabbed tables like in the kubectl guide or cluster inventory */
+
+.tabbed-set {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.tabbed-set .highlight {
+  background: #ddd;
+}
+
+.tabbed-set .tabbed-content {
+  display: none;
+  order: 99;
+  width: 100%;
+}
+
+.tabbed-set label {
+  width: auto;
+  margin: 0 0.5em;
+  padding: 0.25em;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.tabbed-set input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabbed-set input:nth-child(n+1) {
+  color: #333333;
+}
+
+.tabbed-set input:nth-child(n+1):checked + label {
+    color: #61758D
+}
+
+.tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
+    display: block;
+}
+
+/* Task lists are the green checakable boxes that don't show up as normal lists */
+
+.markdown-body .task-list-item {
+  list-style-type: none !important;
+}
+
+.markdown-body .task-list-item input[type="checkbox"] {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}

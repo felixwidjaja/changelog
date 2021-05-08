@@ -5,6 +5,7 @@ docs_dir: docs/
 
 theme:
   name: material
+  custom_dir: docs/theme
   palette:
     primary: black
     scheme: slate
@@ -14,7 +15,7 @@ theme:
   features:
     - navigation.instant
     - header.autohide
-  favicon: assets/favicon.png
+  favicon: assets/images/favicon.png
 
 nav:
   - Home: index.md
@@ -77,6 +78,12 @@ markdown_extensions:
       separator: "\uff0b"
   - pymdownx.details
   - pymdownx.tabbed
+
+extra_css:
+  - assets/pymdownx-extras/extra-f685a81b8c.css
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/pymdownx-extras/extra-uml-30be4556.js
 
 plugins:
   - search
